@@ -1,2 +1,2 @@
-# java-workshop-sol
-Java EE Workshop
+# java-workshop
+Java EE Workshop 
