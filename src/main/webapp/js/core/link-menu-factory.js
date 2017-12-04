@@ -1,10 +1,10 @@
 require(["jquery", "context-menu", "map"], function($, contextMenu, layeredMap) {
 	var factory = {
-		factoryName: "element",
+		factoryName: "link",
 		getMenuItems: function(event, context) {
 			var list = [];
-			var addItem = $("<li><div>Add Element</div></li>").attr({
-                funcName: "addElement",
+			var addItem = $("<li><div>Add Link</div></li>").attr({
+                funcName: "addLink",
                 params: JSON.stringify([ context.coordinate ])
             })
 			list.push(addItem);
@@ -12,7 +12,7 @@ require(["jquery", "context-menu", "map"], function($, contextMenu, layeredMap) 
 		},
 		getActionMapping : function() {
 			var map = new Map();
-			map.set("addElement", this.add);
+			map.set("addLink", this.add);
 			return map;
 		},
 		add: function(coordinate) {
@@ -43,5 +43,5 @@ require(["jquery", "context-menu", "map"], function($, contextMenu, layeredMap) 
                 });
             }
 		}
-	//contextMenu.registerItemFactory(factory, 1);
+	contextMenu.registerItemFactory(factory, 2);
 });

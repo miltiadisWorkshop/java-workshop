@@ -5,6 +5,20 @@
         version="3.0"
         xmlns="http://java.sun.com/xml/ns/javaee">
     
+    <!--  1st Exercise
+    Uncomment the following servlet and fill in the correct information
+    <servlet>
+        <servlet-name>HelpServlet</servlet-name>
+        <servlet-class>FILL IN</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>FILL IN</servlet-name>
+        <url-pattern>FILL IN</url-pattern>
+    </servlet-mapping>
+     -->
+    
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>

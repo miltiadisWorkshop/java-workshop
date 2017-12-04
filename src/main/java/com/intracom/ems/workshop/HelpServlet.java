@@ -48,17 +48,20 @@ public class HelpServlet extends HttpServlet {
             resp.setContentType("application/json");
             break;
         default:
-            resp.setContentType("text/plain");
-            pw.println("Participant: " + participantName);
-            pw.println("Workshop: Java EE Workshop");
-            pw.println("Place: Central Library of NTUA");
-            pw.println("City: Athens");
-            pw.println("Coordinator: Intracom Telecom S.A.");
-            // should call flush() on writer?
+            /*
+             * 1st Exercise. Write your code for first exercise here. The
+             * response should carry the following string: Participant: THE NAME
+             * OF Participant Workshop: Java SE/EE Workshop Place: Central
+             * Library of NTUA City: Athens Coordinator: Intracom Telecom S.A.
+             */
         }
     }
 
     private String responseAsJson(String participantName) {
+        /*
+         * 3rd Exersice Write code that will return the previous response in a
+         * JSON format.
+         */
         throw new RuntimeException("Not Implemented");
     }
 }

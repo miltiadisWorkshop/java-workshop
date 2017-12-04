@@ -23,7 +23,9 @@ require(["context-menu"], function(contextMenu) {
 	        dialog.dialog("open");
 		}
 	}
+	/* WORKSHOP NOTE: uncomment the following line to enable the Help command. */
 	contextMenu.registerItemFactory(factory, 3);
+	/* */
 	// Now define our actions
 	var dialog;
     function createAskNameDialog() {
@@ -78,18 +80,19 @@ require(["context-menu"], function(contextMenu) {
                 contentType: "text/plain; charset=UTF-8",
                 data: name,
                 headers: {
-                	"Accept": "text/plain"
-                    //"Accept": "application/json"
+                	/* Third Exercise 
+                	 * Comment out value "text/plain for header "Accept"
+                	 * and uncomment "application/json"
+                	 */
+                	"Accept": "text/plain" /* "application/json" */
                 }
             }).done(function(data) {
                 alert(data);
             }).fail(function(jqXHR, textStatus, errorThrown) {
-            	if(jqXHR.status === 599) {
-            		alert(jqXHR.responseText);
-            	}
-            	else {
-            		alert(errorThrown);
-            	}
+            	/* 2nd Exercise
+            	 * Write your code here to show the application error.
+            	 */
+            	alert(errorThrown);
             });
         }
     }

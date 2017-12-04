@@ -1,9 +1,13 @@
 define(["ol", "jquery", "context-menu"], function(ol, $, contextMenu) {
+	// removes the background image
+	$("#map").empty();
+	// The definition for requirejs
 	var mapDefinition = {
 		getLayerMap: function() {
 			return layerMap;
 		},
 		loadFeatures: function() {
+			/*
 	        $.ajax({
 	            method: "GET",
 	         	url: window.location.href + "rest/ne/get",
@@ -35,6 +39,7 @@ define(["ol", "jquery", "context-menu"], function(ol, $, contextMenu) {
 		    }).fail(function(jqXHR, textStatus, errorThrown) {
 		     	
 		    });
+		    */
 		}
 	}
 	// Get OpenStreetMap Tiles
